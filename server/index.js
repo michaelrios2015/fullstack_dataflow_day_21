@@ -4,11 +4,11 @@ const path = require('path');
 
 const app = express();
 // our static directories --- these guys never change 
-app.use('/dist', express.static(path.join(__dirname, 'dist')));
+app.use('/dist', express.static(path.join(__dirname, '../dist')));
 
-app.use('/assets', express.static(path.join(__dirname, 'assets')));
+app.use('/assets', express.static(path.join(__dirname, '../assets')));
 
-app.get('/', (req, res, next)=> res.sendFile(path.join(__dirname, 'index.html')));
+app.get('/', (req, res, next)=> res.sendFile(path.join(__dirname, '../index.html')));
 
 app.get('/api/users', async(req, res, next)=> {
     try{

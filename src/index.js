@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { render } from 'react-dom';
 
 class App extends Component {
     constructor(){
@@ -24,6 +23,8 @@ class App extends Component {
             return '.....loading';
         }
         return (
+            <div>
+                <h2>Users ({ users.length })</h2>
                 <ul>
                     {
                         users.map( user => {
@@ -35,6 +36,7 @@ class App extends Component {
                         })
                     }
                 </ul>
+            </div>        
         );
     }
 }
